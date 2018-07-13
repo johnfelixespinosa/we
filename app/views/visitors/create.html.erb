@@ -55,31 +55,22 @@
  <div class="col-lg-8 col-lg-offset-2"> %>
  <h1 class="brand-heading">Locations</h1><br>
 
-<input class="new-todo" placeholder="What's your name?" autofocus="">
-
     <%= form_for(@visitor) do |f| %>
 
       <%= f.text_field :name, :class => "new-todo" %>
  
-    
+    <% end %>
 
  <h3>Check all you've visited</h3>
 
- <ul class="todo-list"> 
-  <% @locations.each do |location| %>
+      <ul class="todo-list">  
           <li>
             <div class="view">
-              <%# <input class="toggle" type="checkbox"> %>
-              <%= check_box_tag 'location[]', location.id, false, class: 'toggle' %>
-                <label><%= location.name %></label>
-
+              <input class="toggle" type="checkbox">
+                <label>Atlanta</label>
             </div>
           </li>
-      <% end %>
-       <%= f.submit %>
-       <% end %>
-      <%# <ul class="todo-list">  
-       
+          <li>
             <div class="view">
               <input class="toggle" type="checkbox">
                 <label>Austin</label>
@@ -96,7 +87,7 @@
               <input class="toggle" type="checkbox">
                 <label>Boston</label>
             </div>
-          </li> %>
+          </li>
 
 
  <%# </div>
